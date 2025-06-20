@@ -32,7 +32,9 @@ export const VideoInputDetails = ({
           Clear
         </button>
       </div>
-      <p className="border-b mb-2 pb-2">{videoFile?.fileName}</p>
+      <p className="border-b mb-2 pb-2 " style={{ wordWrap: "break-word" }}>
+        {videoFile?.fileName}
+      </p>
       <div className="flex justify-between items-center">
         <p>File size</p>
         <p>{bytesToSize(videoFile.fileSize)}</p>
