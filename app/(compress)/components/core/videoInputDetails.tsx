@@ -23,7 +23,7 @@ export const VideoInputDetails = ({
   >
     <div className=" text-sm">
       <div className="flex justify-between items-center border-b mb-2 pb-2">
-        <p className="">Fill Input</p>
+        <p className="">File </p>
         <button
           onClick={onClear}
           type="button"
