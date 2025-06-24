@@ -61,8 +61,9 @@ const CompressImage = ({
     const fileOriginalWidth = image.naturalWidth; // use actual image width
 
     const options = {
-      maxSizeMB: (imageSettings.maxSize / 100) * fileSizeInMB,
-      maxWidthOrHeight: (imageSettings.maxSize / 100) * fileOriginalWidth,
+      maxSizeMB: (parseInt(imageSettings.maxSize) / 100) * fileSizeInMB,
+      maxWidthOrHeight:
+        (parseInt(imageSettings.maxSize) / 100) * fileOriginalWidth,
       useWebWorker: true,
       onProgress: (p: number) => setProgress(p),
     };

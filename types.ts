@@ -27,16 +27,16 @@ export enum QualityType {
 }
 
 export enum MaxSize {
-  Full = 100,
-  Ninety = 90,
-  SeventyFive = 75,
-  Half = 50,
+  Full = "100",
+  Ninety = "90",
+  SeventyFive = "75",
+  Half = "50",
 }
 export enum MaxWidth {
-  Full = 100,
-  Ninety = 90,
-  SeventyFive = 75,
-  Half = 50,
+  Full = "100",
+  Ninety = "90",
+  SeventyFive = "75",
+  Half = "50",
 }
 
 export type ImageInputSettings = {
