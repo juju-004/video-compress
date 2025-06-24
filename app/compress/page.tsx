@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
-const CompressVideo = dynamic(() => import("../components/compress"), {
+const Compress = dynamic(() => import("./components/compress"), {
   ssr: false,
 });
 
@@ -47,7 +47,7 @@ const Page = () => {
   return (
     <div className="max-w-5xl mx-auto pt-32">
       <div className="lg:grid lg:grid-cols-8 gap-10 lg:h-[calc(100dvh-130px)] pb-10 px-6 lg:px-0 flex flex-col">
-        <CompressVideo />
+        <Compress />
       </div>
     </div>
   );
