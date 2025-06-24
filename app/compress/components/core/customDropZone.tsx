@@ -61,11 +61,11 @@ export const CustomDropZone = ({
           <input {...getInputProps()} />
           <Projector />
           <h3 className="text-center mt-5">
-            Click to select video
+            Click to select video or image
             <br />
             or
             <br />
-            drag video and Drop
+            drag and Drop
           </h3>
         </div>
       )}

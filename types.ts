@@ -4,6 +4,7 @@ export type FileActions = {
   fileSize: number;
   from: string;
   fileType: string;
+  fileCategory: "i" | "v";
   isError?: boolean;
   url?: string;
   output?: any;
@@ -25,6 +26,23 @@ export enum QualityType {
   Low = "20",
 }
 
+export enum MaxSize {
+  Full = 100,
+  Ninety = 90,
+  SeventyFive = 75,
+  Half = 50,
+}
+export enum MaxWidth {
+  Full = 100,
+  Ninety = 90,
+  SeventyFive = 75,
+  Half = 50,
+}
+
+export type ImageInputSettings = {
+  maxSize: MaxSize;
+  maxWidth: MaxWidth;
+};
 export type VideoInputSettings = {
   quality: QualityType;
   videoType: VideoFormats;

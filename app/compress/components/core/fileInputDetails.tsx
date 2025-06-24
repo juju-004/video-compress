@@ -3,15 +3,12 @@ import { FileActions } from "~/types";
 import { bytesToSize } from "~/utils/bytesToSize";
 import { motion } from "framer-motion";
 
-type VideoInputDetailsProps = {
-  videoFile: FileActions;
+type FileInputDetailsProps = {
+  file?: FileActions;
   onClear: () => void;
 };
 
-export const VideoInputDetails = ({
-  videoFile,
-  onClear,
-}: VideoInputDetailsProps) => (
+export const FileInputDetails = ({ file, onClear }: FileInputDetailsProps) => (
   <motion.div
     layout
     initial={{ scale: 0.8, opacity: 0 }}
@@ -32,13 +29,19 @@ export const VideoInputDetails = ({
           Clear
         </button>
       </div>
-      <p className="border-b mb-2 pb-2 " style={{ wordWrap: "break-word" }}>
-        {videoFile?.fileName}
-      </p>
-      <div className="flex justify-between items-center">
-        <p>File size</p>
-        <p>{bytesToSize(videoFile.fileSize)}</p>
-      </div>
+      {file ? (
+        <>
+          <p className="border-b mb-2 pb-2 " style={{ wordWrap: "break-word" }}>
+            {file?.fileName || "No file name"}
+          </p>
+          <div className="flex justify-between items-center">
+            <p>File size</p>
+            <p>{bytesToSize(file.fileSize)}</p>
+          </div>
+        </>
+      ) : (
+        <p>No file chosen</p>
+      )}
     </div>
   </motion.div>
 );
