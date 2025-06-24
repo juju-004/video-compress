@@ -6,15 +6,14 @@ const Compress = dynamic(() => import("./components/compress"), {
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "/video",
+    canonical: "/compress",
     languages: {
       "en-US": "/en-US",
     },
   },
-  title:
-    "Compress & Convert Videos and Image Like a Pro - Free, High-Quality Online Tool",
+  title: "Compress & Convert Videos & Images Like a Pro",
   description:
-    "Say goodbye to bulky video files! Compress and convert videos effortlessly with our free online tool. Enjoy high-quality results without sacrificing clarity, perfect for sharing, uploading, or editing. Convert like a pro, for free!",
+    "Say goodbye to bulky video & image files! Compress and convert effortlessly with our free online tool. Enjoy high-quality results without sacrificing clarity, perfect for sharing, uploading, or editing. Convert like a pro, for free!",
   keywords: [
     "Free Video Compressor",
     "Online Video Converter",
@@ -27,11 +26,10 @@ export const metadata: Metadata = {
   ],
   robots: "index, follow",
   openGraph: {
-    title:
-      "Compress & Convert Videos Like a Pro - Free, High-Quality Online Tool",
+    title: "Compress & Convert Videos & Images Like a Pro",
     description:
-      "Say goodbye to bulky video files! Compress and convert videos effortlessly with our free online tool. Enjoy high-quality results without sacrificing clarity, perfect for sharing, uploading, or editing. Convert like a pro, for free!",
-    url: `${process.env.NEXT_PUBLIC_URL}/video`,
+      "Say goodbye to bulky video & image files! Compress and convert effortlessly with our free online tool. Enjoy high-quality results without sacrificing clarity, perfect for sharing, uploading, or editing. Convert like a pro, for free!",
+    url: `${process.env.NEXT_PUBLIC_URL}/compress`,
     type: "website",
     images: "/og-image.png",
     siteName: "Video Compression Hub",
